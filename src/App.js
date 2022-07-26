@@ -70,7 +70,7 @@ export default function App() {
     <main>
       <div className="header">
         <h1 className="heading">Random<br /><span className="highlighted">Password Generator</span></h1>
-        <h2 className="subtitle">Generate password with one click, no more brainstorming</h2>
+        <h2 className="subtitle">Create random password with one click</h2>
         <input id="input-box" type="number" onChange={handleChange}/>
         <button className="generate-btn" onClick={generatePassword}><img src={Lightning} alt="Password Generator"/>Generate passwords</button>
       </div>
