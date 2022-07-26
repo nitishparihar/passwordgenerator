@@ -102,5 +102,3 @@ export default function App() {
     </main>
   )
 }
-
-//  <button className="generate-btn" onClick={(event) => generatePassword(event.target.value)}><img src={Lightning} alt="Password Generator"/>Generate passwords</button>
