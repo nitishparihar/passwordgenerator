@@ -6,7 +6,7 @@ import Dots from "./icons/dots.png"
 
 export default function App() {
   const [password, setPassword] = useState("")
-  const [inputvalue, setInputvalue] = useState("");
+  const [inputvalue, setInputvalue] = useState(5);
   const [copied1, setCopied1] = useState(false)
   const [copied2, setCopied2] = useState(false)
   const [copied3, setCopied3] = useState(false)
@@ -17,6 +17,16 @@ export default function App() {
   }
 
   function generatePassword() {
+    let maxError = []
+    for(let k = 0; k < 4; k++){
+      maxError[k] = ["Max Length 15"]
+    }
+
+    let minError = []
+    for(let m = 0; m < 4; m++){
+      minError[m] = ["Min Length 1"]
+    }
+
     var results = []
     for (let j = 0; j < 4; j++) {
       var result = ""
@@ -27,7 +37,13 @@ export default function App() {
       }
       results[j] = result
     }
-    setPassword(results)
+    if(inputvalue > 15){
+      setPassword(maxError)
+    } else if(inputvalue <= 0){
+    setPassword(minError)
+    } else {
+      setPassword(results)
+    }
   }
 
   function copy1() {
@@ -70,8 +86,9 @@ export default function App() {
     <main>
       <div className="header">
         <h1 className="heading">Random<br /><span className="highlighted">Password Generator</span></h1>
-        <h2 className="subtitle">Create random password with one click</h2>
-        <input id="input-box" type="number" onChange={handleChange}/>
+        <h2 className="subtitle">Generate 4 random passwords with one click</h2>
+        <p className="subtitle-1">Password length: Max- 15 & Min- 1</p>
+        <input id="input-box" type="number" placeholder="5" onChange={handleChange}/>
         <button className="generate-btn" onClick={generatePassword}><img src={Lightning} alt="Password Generator"/>Generate passwords</button>
       </div>
       <hr />
