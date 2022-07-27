@@ -37,13 +37,9 @@ export default function App() {
       }
       results[j] = result
     }
-    if(inputvalue > 15){
-      setPassword(maxError)
-    } else if(inputvalue <= 0){
-    setPassword(minError)
-    } else {
-      setPassword(results)
-    }
+    inputvalue > 15 ? setPassword(maxError) : 
+    inputvalue <=0 ? setPassword(minError) : 
+    setPassword(results) 
   }
 
   function copy1() {
