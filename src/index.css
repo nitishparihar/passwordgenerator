@@ -45,7 +45,7 @@ body, main {
     flex-direction: column;
     text-align: left;
     padding: 5% 9%;
-    margin-left: -17%;
+    margin-left: -15%;
 }
 
 .heading {
@@ -53,7 +53,7 @@ body, main {
     font-weight: 700;
     font-size: 40px;
     line-height: 40px;
-    margin: 5px;
+    margin: 0 0 5px 0;
 
     letter-spacing: -0.025em;
 
@@ -69,9 +69,9 @@ body, main {
 .subtitle {
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
-    color: var(--mediumgray);
+    font-size: 18.5px;
+    line-height: 26px;
+    color: var(--mediumgray);   
 }
 
 .subtitle-1 {
@@ -89,6 +89,7 @@ body, main {
     line-height: 24px;
     color: var(--white);
     margin-top: 20px;
+    margin-bottom: -5px;
 
     display: flex;
     flex-direction: row;
@@ -187,6 +188,8 @@ hr {
 }
 
 .error {
-  color: red;
-  margin-bottom: -15px;
+  color: orangered;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 5px;
 }

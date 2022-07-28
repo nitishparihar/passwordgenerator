@@ -17,16 +17,6 @@ export default function App() {
   }
 
   function generatePassword() {
-    let maxError = []
-    for(let k = 0; k < 4; k++){
-      maxError[k] = ["Max Length 15"]
-    }
-
-    let minError = []
-    for(let m = 0; m < 4; m++){
-      minError[m] = ["Min Length 1"]
-    }
-
     var results = []
     for (let j = 0; j < 4; j++) {
       var result = ""
@@ -37,8 +27,8 @@ export default function App() {
       }
       results[j] = result
     }
-    inputvalue > 15 ? setPassword(maxError) : 
-    inputvalue <=0 ? setPassword(minError) : 
+    inputvalue > 15 ? setPassword("") : 
+    inputvalue <=0 ? setPassword("") : 
     setPassword(results) 
   }
 
@@ -87,6 +77,7 @@ export default function App() {
         <input id="input-box" type="number" placeholder="5" onChange={handleChange}/>
         <button className="generate-btn" onClick={generatePassword}><img src={Lightning} alt="Password Generator"/>Generate passwords</button>
       </div>
+        {inputvalue > 15 ? <span className="error">Password Max Length is 15</span> : inputvalue <=0 ? <span className="error">Password Min Length is 1</span> : ""}
       <hr />
       <div className="password-wrapper">
         <div className="passwords">
