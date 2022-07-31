@@ -193,3 +193,78 @@ hr {
   text-align: center;
   margin-bottom: 5px;
 }
+
+@media (max-width: 768px) {
+    html {
+        margin: 0 auto;
+    }
+    main {
+        display: block;
+        width: 440px;
+        height: auto;
+    }
+    .header {
+        display: block;
+        text-align: center;
+        align-self: center;
+        margin: 0 auto;
+    }
+    .heading {
+        font-size: 30px;
+        margin: 0;
+    }
+    .subtitle {
+        font-size: 16px;
+        margin-bottom: 15px;  
+    }
+    .subtitle-1 {
+        font-size: 16px;
+        margin-top: -10px;
+        margin-bottom: 1.5em;
+    }
+    .generate-btn {
+        font-size: 12px;
+        line-height: 20px;
+        margin: 15px auto -5px auto;    
+        width: 170px;
+        height: 40px;
+        gap: 5px;
+    }
+    .generate-btn:active {
+        width: 180px;
+    }
+    .error {
+        padding-left: 27%;
+    }
+      hr {
+        width: 370px;
+    }
+    .password-wrapper {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0;
+    }
+    .passwords {
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+            "password"
+            "password";
+        justify-items: center;
+        gap: 0px 0px; 
+        width: 380px;
+        margin: 0 auto;
+    }
+    .password-display {
+        grid-area: "password";
+        width: 160px;
+        height: 39px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .password {
+        font-size: 13px;
+    }
+}
