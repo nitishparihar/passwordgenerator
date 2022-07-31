@@ -195,12 +195,9 @@ hr {
 }
 
 @media (max-width: 768px) {
-    html {
-        margin: 0 auto;
-    }
     main {
         display: block;
-        width: 440px;
+        width: 400px;
         height: auto;
     }
     .header {
