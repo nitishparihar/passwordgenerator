@@ -197,7 +197,7 @@ hr {
 @media (max-width: 768px) {
     main {
         display: block;
-        width: 400px;
+        width: 440px;
         height: auto;
     }
     .header {
